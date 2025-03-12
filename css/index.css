@@ -90,6 +90,7 @@ hr {
     grid-template-columns: repeat(4, 25%);
     gap: 10px;
 }
+
 .cards-wrapper > * {
     width: 100%;
 }
@@ -121,6 +122,12 @@ hr {
 .stats-explain td {
     border: 2px solid #ffffff;
     border-collapse: collapse;
+}
+
+
+.stats td:hover {
+    background: #f0b579;
+    color: black;
 }
 
 /* training day*/
@@ -276,19 +283,40 @@ hr {
 }
 
 /*chart*/
-.mn-bar { background-color: #29abd7; }
-.tu-bar { background-color: #096e6e; }
-.wd-bar { background-color: #104567; }
-.th-bar { background-color: #4c16a1; }
-.fr-bar { background-color: cornflowerblue; }
-.st-bar { background-color: #7fbfe5; }
-.sn-bar { background-color: #5a4b82; }
+.mn-bar {
+    background-color: #29abd7;
+}
+
+.tu-bar {
+    background-color: #096e6e;
+}
+
+.wd-bar {
+    background-color: #104567;
+}
+
+.th-bar {
+    background-color: #4c16a1;
+}
+
+.fr-bar {
+    background-color: cornflowerblue;
+}
+
+.st-bar {
+    background-color: #7fbfe5;
+}
+
+.sn-bar {
+    background-color: #5a4b82;
+}
 
 
 @media (max-width: 1200px) {
     .container {
         padding: 0 10%;
     }
+
     .cards-wrapper {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -298,6 +326,7 @@ hr {
     .container {
         padding: 0 5%;
     }
+
     .cards-wrapper {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -309,14 +338,17 @@ hr {
         height: auto;
         padding: 10px 0;
     }
+
     .links {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
     .links a {
         margin: 5px 0;
     }
+
     .cards-wrapper {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -326,12 +358,15 @@ hr {
     .title {
         font-size: 30px;
     }
+
     .sub-title {
         font-size: 25px;
     }
+
     .default-text {
         font-size: 14px;
     }
+
     .stats {
         width: 90%;
     }
@@ -345,6 +380,107 @@ hr {
     margin-top: 20px;
 }
 
-.meal-plan-list{
+.meal-plan-list {
+    color: white;
+}
+
+.idle, .process {
+    margin-top: 10px;
+    width: 120px;
+    height: 40px;
+    border-radius: 12px;
+    color: white;
+    font-size: 23px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    border: 3px solid white;
+}
+
+.idle:hover, .process:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: 300ms ease-in-out;
+}
+
+.idle {
+    background: #52dd52;
+}
+
+.process {
+    background: indianred;
+}
+
+.status {
+    color: white;
+
+}
+
+.day-pick {
+    background: #000000;
+    color: white;
+    font-weight: bold;
+    border: 2px solid #1e177c;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.update {
+    background: black;
+    color: white;
+    border: 2px solid #1e177c;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.update:active {
+    transition: 250ms ease-in-out;
+    transform: scale(0.90);
+    background: cornflowerblue;
+
+}
+
+.button-hover:hover {
+    cursor: pointer;
+    transition: 250ms ease-in-out;
+    transform: scale(1.05);
+}
+
+.type-pick {
+    padding: 5px;
+    background: #000000;
+    border: 2px solid #1e177c;
+    border-radius: 10px;
+    color: white;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.flex-col {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.blink {
+    animation: blink 450ms ease-in-out;
+}
+
+@keyframes blink {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+
+    }
+}
+
+.footer-text {
+    text-align: center;
+
     color: white;
 }

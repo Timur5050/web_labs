@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Achievements & Stats</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
 <header>
@@ -26,7 +26,8 @@
         <div class="cards-wrapper">
             <div class="card">
                 <h3 class="sub-title">Bench Press 100kg</h3>
-                <p class="default-text">Досягнута мета - жим лежачи 100 кг! Важка робота та наполегливість дали результат.</p>
+                <p class="default-text">Досягнута мета - жим лежачи 100 кг! Важка робота та наполегливість дали
+                    результат.</p>
             </div>
             <div class="card">
                 <h3 class="sub-title">Deadlift 150kg</h3>
@@ -45,52 +46,8 @@
     <section>
         <h1 class="title">Activity Statistics</h1>
         <div class="stats-wrapper">
-            <table class="stats">
-                <tr>
-                    <td class="gym-day">1</td>
-                    <td>2</td>
-                    <td class="gym-day">3</td>
-                    <td>4</td>
-                    <td class="gym-day">5</td>
-                    <td>6</td>
-                    <td>7</td>
-                </tr>
-                <tr>
-                    <td class="skip-day">8</td>
-                    <td>9</td>
-                    <td class="gym-day">10</td>
-                    <td>11</td>
-                    <td class="skip-day">12</td>
-                    <td class="cardio-day">13</td>
-                    <td>14</td>
-                </tr>
-                <tr>
-                    <td class="gym-day">15</td>
-                    <td>16</td>
-                    <td class="skip-day">17</td>
-                    <td>18</td>
-                    <td class="gym-day">19</td>
-                    <td>20</td>
-                    <td class="cardio-day">21</td>
-                </tr>
-                <tr>
-                    <td class="gym-day">22</td>
-                    <td>23</td>
-                    <td class="gym-day">24</td>
-                    <td>25</td>
-                    <td class="skip-day">26</td>
-                    <td class="cardio-day">27</td>
-                    <td>28</td>
-                </tr>
-                <tr>
-                    <td class="gym-day">29</td>
-                    <td>30</td>
-                    <td class="gym-day">31</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+            <table class="stats ">
+
             </table>
             <div>
                 <table class="text-white text-center mx-auto stats-explain">
@@ -104,8 +61,27 @@
                         <td class="skip-day"> Пропуск</td>
                     </tr>
                 </table>
-                <h4 class="default-text">Всього тренувань у залі: 10/14</h4>
-                <h4 class="default-text">Всього кардіо: 3</h4>
+                <h4 class="default-text" id="total_gym">Всього тренувань у залі: </h4>
+                <h4 class="default-text" id="total_cardio">Всього кардіо: </h4>
+            </div>
+            <div>
+                <div class="flex-col">
+
+                    <h5 class="text-white">Оберіть час</h5>
+                    <input type="number" class="day-pick" id="time-select" min="1" max="3" step="0.5"
+                           onChange="validateInputTime(this)">
+
+                    <h5 class="text-white">Оберіть дату</h5>
+                    <input type="number" class="day-pick" id="day-select" min="1" max="31" step="1"
+                           onChange="validateInput(this)">
+
+                    <select class="type-pick font-bold" id="type-select">
+                        <option value="cardio">Кардіо</option>
+                        <option value="gym">Зал</option>
+                        <option value="skip">Пропуск</option>
+                    </select>
+                    <button class="update button-hover" onclick="handleUpdate(this)">Оновити</button>
+                </div>
             </div>
         </div>
     </section>
@@ -114,5 +90,7 @@
     <hr>
     <p class="footer-text">Timur Stukan 2025 Project X</p>
 </footer>
+<script src="../scripts/progress.js"></script>
+
 </body>
 </html>
