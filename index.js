@@ -2,23 +2,23 @@
 
 const cards_data = [
     {
-        video_src: "1https://www.youtube.com/embed/B12MXF0bSFo",
+        video_src: "https://www.youtube.com/embed/B12MXF0bSFo",
         title: "Full Body Workout",
         description: "Комплексне тренування всього тіла для тих, хто хоче зміцнити м'язи та покращити витривалість.",
 
     },
     {
-        video_src: "1https://www.youtube.com/embed/3IQVNjWH60A",
+        video_src: "https://www.youtube.com/embed/3IQVNjWH60A",
         title: " Body Strength",
         description: "Зосередьтесь на розвитку сили верхньої частини тіла, включаючи груди, спину та руки.",
     },
     {
-        video_src: "1https://www.youtube.com/embed/H6mRkx1x77k",
+        video_src: "https://www.youtube.com/embed/H6mRkx1x77k",
         title: "Leg Day Routine",
         description: "Навантаження на ноги: присідання, випади та інші вправи для потужних ніг.",
     },
     {
-        video_src: "1https://www.youtube.com/embed/XgI_p8bKg78",
+        video_src: "https://www.youtube.com/embed/XgI_p8bKg78",
         title: "Core & Abs",
         description: "Вправи для міцного преса та стабілізації корпусу, що покращать баланс і витривалість.",
     }
