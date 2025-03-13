@@ -136,3 +136,28 @@ function renderWholeInfo(days) {
     renderGymsCount(getGymsCount(days))
     renderCardioCount(getCardiosCount(days))
 }
+document.addEventListener("DOMContentLoaded", function () {
+    const statsTable = document.querySelector(".stats");
+
+    statsTable.addEventListener("click", function (event) {
+        if (event.target.tagName === "TD") {
+            const cell = event.target;
+            const trainingType = getTrainingType(cell);
+            const duration = getTrainingDuration(cell);
+
+            alert(`Тренування: ${trainingType}\nТривалість: ${duration} год.`);
+        }
+    });
+
+    function getTrainingType(cell) {
+        if (cell.classList.contains("gym-day")) return "Тренування в залі";
+        if (cell.classList.contains("cardio-day")) return "Кардіо";
+        if (cell.classList.contains("skip-day")) return "Пропуск";
+        return "Невідомо";
+    }
+
+    function getTrainingDuration(cell) {
+        return cell.textContent.trim() || "Не вказано";
+    }
+});
+
